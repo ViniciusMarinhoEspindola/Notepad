@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/19.1.1/classic/ckeditor.js"></script>
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Bloco de notas</title>
+  </head>
+  <body>
+    <nav>
+      <div id="nav" class="nav">
+        <ul>
+          <li>
+            <span>
+              <i class="fas fa-home"></i>
+              <!-- Início -->
+              <div class="popover">
+                <div class="popover-content">
+                  Início
+                </div>
+              </div>
+            </span>
+          </li>
+          <li title="Adicionar anotação">
+            <span>
+              <i class="fas fa-plus-circle"></i>
+              <!-- Adicionar anotação -->
+              <div class="popover">
+                <div class="popover-content">
+                  Adicionar anotação
+                </div>
+              </div>
+            </span>
+          </li>
+          <li>
+            <span>
+              <i class="fas fa-calendar-plus"></i>
+              <!-- Adicionar lembrete -->
+              <div class="popover">
+                <div class="popover-content">
+                  Adicionar lembrete
+                </div>
+              </div>
+            </span>
+          </li>
+          <li>
+            <span>
+              <i class="fas fa-calendar-alt"></i>
+              <!-- Ver agenda -->
+              <div class="popover">
+                <div class="popover-content">
+                  Ver agenda
+                </div>
+              </div>
+            </span>
+          </li>
+          <li>
+            <span>
+              <i class="fas fa-clipboard-list"></i>
+              <!-- Ver lembretes -->
+              <div class="popover">
+                <div class="popover-content">
+                  Ver lembretes
+                </div>
+              </div>
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div id="navbar" class="navbar">
+        <form action="#">
+          <input type="text" name="search" id="search" />
+          <i class="fas fa-search" id="closeSrc"></i>
+        </form>
+
+        <span id="hamburguer" class="hamburguer"></span>
+      </div>
+    </nav>
+    <div class="editor">
+      <div id="editor">Aqui ficam as anotações.</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

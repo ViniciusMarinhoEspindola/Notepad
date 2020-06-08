@@ -1,0 +1,81 @@
+.sticky-notes {
+  background-color: #fc9e21;
+  height: 100vh;
+  padding: 20px;
+  overflow: auto;
+}
+
+.postit {
+  position: absolute;
+  padding: 20px;
+  padding-top: 50px;
+  min-height: 200px;
+  width: 290px;
+  background-color: #fff;
+  box-shadow: 0px 25px 30px -15px #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  z-index: 5;
+}
+.postit:hover {
+  transform: scale(1.25) !important;
+  -webkit-transform: scale(1.25) !important;
+  -moz-transform: scale(1.25) !important;
+  -o-transform: scale(1.25) !important;
+}
+.postit::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  width: 40px;
+  height: 16px;
+  left: 130px;
+  opacity: 0.7;
+  background-color: #fff;
+
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  left: 135px;
+  background-color: brown;
+  opacity: 1;
+  border: 3px solid #a45c40;
+  box-shadow: 0px 3px 10px -2px black;
+}
+
+.postit-1 {
+  top: 900px;
+  left: 150px;
+}
+
+.postit-2 {
+  top: 1080px;
+  left: 950px;
+}
+
+.postit-3 {
+  top: 800px;
+  left: 550px;
+}
+
+.postit .postit-title {
+  font-size: 150%;
+  font-family: "Shadows Into Light Two", cursive;
+  font-weight: 600;
+  color: #000;
+}
+
+.postit .content {
+  font-family: "Dancing Script", cursive;
+  display: flex;
+  justify-content: start;
+  font-size: 150%;
+  margin-top: 10px;
+  color: #777;
+  max-height: 250px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

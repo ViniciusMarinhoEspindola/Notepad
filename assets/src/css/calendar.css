@@ -1,0 +1,30 @@
+.calendar {
+  background-color: #c20258;
+  height: 100vh;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.calendar .calendario {
+  width: 800px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.calendar .calendario span {
+  width: 160px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #bbb;
+  background-color: #fff;
+  color: #444;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+}
+.calendar .calendario .selected {
+  background-color: #ccc;
+  color: #444;
+}

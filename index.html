@@ -6,7 +6,9 @@
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdn.ckeditor.com/ckeditor5/19.1.1/classic/ckeditor.js"></script>
-    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="./assets/dist/css/style.css" />
+    <link rel="stylesheet" href="./assets/dist/css/style.min.css" />
 
     <title>Bloco de notas</title>
   </head>
@@ -14,77 +16,115 @@
     <nav>
       <div id="nav" class="nav">
         <ul>
-          <li>
-            <span>
+          <a href="#notepad">
+            <li>
               <i class="fas fa-home"></i>
-              <!-- Início -->
-              <div class="popover">
-                <div class="popover-content">
-                  Início
-                </div>
-              </div>
-            </span>
-          </li>
-          <li title="Adicionar anotação">
-            <span>
+              <span>Início</span>
+            </li>
+          </a>
+          <a href="#sticky-notes">
+            <li>
               <i class="fas fa-plus-circle"></i>
-              <!-- Adicionar anotação -->
-              <div class="popover">
-                <div class="popover-content">
-                  Adicionar anotação
-                </div>
-              </div>
-            </span>
-          </li>
-          <li>
-            <span>
+              <span>Adicionar anotação</span>
+            </li>
+          </a>
+          <a href="#calendar">
+            <li>
               <i class="fas fa-calendar-plus"></i>
-              <!-- Adicionar lembrete -->
-              <div class="popover">
-                <div class="popover-content">
-                  Adicionar lembrete
-                </div>
-              </div>
-            </span>
-          </li>
-          <li>
-            <span>
-              <i class="fas fa-calendar-alt"></i>
-              <!-- Ver agenda -->
-              <div class="popover">
-                <div class="popover-content">
-                  Ver agenda
-                </div>
-              </div>
-            </span>
-          </li>
-          <li>
-            <span>
+              <span>Adicionar lembrete</span>
+            </li>
+          </a>
+          <a href="#graphics">
+            <li>
+              <i class="fas fa-chart-bar"></i>
+              <span>Ver agenda</span>
+            </li>
+          </a>
+          <a href="#to-do">
+            <li>
               <i class="fas fa-clipboard-list"></i>
-              <!-- Ver lembretes -->
-              <div class="popover">
-                <div class="popover-content">
-                  Ver lembretes
-                </div>
-              </div>
-            </span>
-          </li>
+              <span>Ver lembretes</span>
+            </li>
+          </a>
         </ul>
       </div>
-
-      <div id="navbar" class="navbar">
-        <form action="#">
-          <input type="text" name="search" id="search" />
-          <i class="fas fa-search" id="closeSrc"></i>
-        </form>
-
-        <span id="hamburguer" class="hamburguer"></span>
-      </div>
     </nav>
-    <div class="editor">
-      <div id="editor">Aqui ficam as anotações.</div>
-    </div>
 
-    <script src="script.js"></script>
+    <main>
+      <section id="notepad" class="notepad">
+        <h1 class="title title-gray">Anotações</h1>
+        <div>Aqui ficam as anotações.</div>
+      </section>
+
+      <section id="sticky-notes" class="sticky-notes">
+        <h1 class="title title-white">Notas adesivas</h1>
+
+        <div class="postit postit-1">
+          <span class="postit-title">Post-it Um</span>
+          <div class="content">
+            Text content #1
+          </div>
+        </div>
+
+        <div class="postit postit-2">
+          <span class="postit-title">Post-it dois</span>
+          <div class="content">
+            Text content #2
+          </div>
+        </div>
+
+        <div class="postit postit-3">
+          <span class="postit-title">Post-it três</span>
+          <div class="content">
+            Text content #3 Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Libero quisquam temporibus labore illo quae optio repellat,
+            inventore provident id quis totam dolor perspiciatis ex quos beatae
+            error animi cum possimus.
+          </div>
+        </div>
+      </section>
+
+      <section id="calendar" class="calendar">
+        <h1 class="title title-white">Calendário</h1>
+
+        <div class="calendario">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>1</span>
+          <span class="selected">2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+        </div>
+      </section>
+
+      <section id="graphics" class="graphics">
+        <h1 class="title title-white">Gráficos</h1>
+      </section>
+
+      <section id="to-do" class="to-do">
+        <h1 class="title title-white">Lista de tarefas</h1>
+      </section>
+    </main>
+
+    <script src="./assets/dist/js/script.min.js"></script>
   </body>
 </html>

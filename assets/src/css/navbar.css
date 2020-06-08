@@ -1,0 +1,38 @@
+.nav {
+  position: fixed;
+  height: 100%;
+  width: 60px;
+  background-color: #292b2c !important;
+  z-index: 9;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul a {
+  text-decoration: none;
+}
+
+.nav ul li {
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+.nav ul li i {
+  padding: 15px 0px 15px 0px;
+  color: #777;
+}
+
+.nav ul li span {
+  display: none;
+  margin-left: 15px;
+}
+
+.nav ul li:hover {
+  background-color: #eee;
+}

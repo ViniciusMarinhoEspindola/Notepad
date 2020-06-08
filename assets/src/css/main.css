@@ -1,0 +1,15 @@
+main {
+  margin-left: 60px;
+}
+section .title {
+  text-align: center;
+  font-size: 3.5em;
+  font-family: "Caveat", cursive;
+}
+section .title-gray {
+  color: #ccc;
+}
+section .title-white {
+  color: #fff;
+  text-shadow: -2px 2px 5px black;
+}

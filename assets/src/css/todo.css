@@ -1,5 +1,5 @@
 .to-do {
-  background-color: #ff7f50;
+  background-color: var(--todo-bg);
   height: 100vh;
   padding: 20px;
   overflow-y: auto;

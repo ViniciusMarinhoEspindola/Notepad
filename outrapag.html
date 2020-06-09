@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=s, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var testObject = {
+        "card-id": 3,
+        title: "Post-it três",
+        content:
+          " Text content #3 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Libero quisquam temporibus labore illo quae optio repellat, inventore provident id quis totam dolor perspiciatis ex quos beatae error animi cum possimus. Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+        positionX: "800px",
+        positionY: "550px",
+      };
+      // Put the object into storage
+      localStorage.setItem("card-1", JSON.stringify(testObject));
+      // Retrieve the object from storage
+      var retrievedObject = localStorage.getItem("card-1");
+      console.log("retrievedObject: ", JSON.parse(retrievedObject));
+    </script>
+  </body>
+</html>

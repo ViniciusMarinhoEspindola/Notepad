@@ -1,5 +1,5 @@
 .notepad {
-  background-color: #fff;
+  background-color: var(--notepad-bg);
   color: #fff;
   height: 100vh;
   padding: 20px;

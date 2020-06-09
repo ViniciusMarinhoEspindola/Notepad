@@ -15,8 +15,9 @@ function scrollToIdOnClick(event) {
   });
 }
 
-var stickyNote = document.querySelectorAll(".postit");
-
+const stickyNote = document.querySelectorAll(".postit");
+const stickyNotesContainer = document.getElementById("sticky-notes");
+// Rotate note in random position //
 stickyNote.forEach((note) => {
   deg = getRandomInt(-7, 7);
   note.style.webkitTransform = "rotate(" + deg + "deg)";
@@ -35,3 +36,49 @@ function getRandomInt(min, max) {
   }
   return randomNumb;
 }
+// -- //
+
+// Drag in Drop Sticky Note //
+var currentPostit = null;
+var currentLeft = 0;
+var currentTop = 0;
+var startX = 0;
+var startY = 0;
+var move = false;
+
+stickyNotesContainer.addEventListener("mousemove", dragStickyNote);
+stickyNotesContainer.addEventListener("mouseup", dropStickyNote);
+
+stickyNote.forEach((note) => {
+  note.addEventListener("mousedown", takeStickyNote);
+});
+
+function takeStickyNote(event) {
+  currentPostit = this;
+  currentLeft = currentPostit.offsetTop;
+  currentTop = currentPostit.offsetLeft;
+
+  startX = event.clientX;
+  startY = event.clientY;
+
+  move = true;
+}
+
+function dragStickyNote(event) {
+  if (move == true) {
+    let newTop = currentTop + event.clientY - startY;
+    let newLeft = currentLeft + event.clientX - startX;
+
+    currentPostit.style.left = newLeft + "px";
+    currentPostit.style.top = newTop + "px";
+    currentPostit.style.zIndex = 9;
+  }
+}
+
+function dropStickyNote(event) {
+  if (currentPostit == null) return;
+  currentPostit.style.zIndex = 6;
+  currentPostit = null;
+  move = false;
+}
+// -- //

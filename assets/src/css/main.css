@@ -1,5 +1,13 @@
 main {
   margin-left: 60px;
+  --notepad-bg: #fff;
+  --stycky-notes-bg: #fc9e21;
+  --calendar-bg: #c20258;
+  --graphics-bg: #008896;
+  --todo-bg: #ff7f50;
+
+  --title-gray: #ccc;
+  --title-white: #fff;
 }
 section .title {
   text-align: center;
@@ -7,9 +15,9 @@ section .title {
   font-family: "Caveat", cursive;
 }
 section .title-gray {
-  color: #ccc;
+  color: var(--title-gray);
 }
 section .title-white {
-  color: #fff;
+  color: var(--title-white);
   text-shadow: -2px 2px 5px black;
 }
